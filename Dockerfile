@@ -1,0 +1,14 @@
+FROM gocd/gocd-agent:16.12.0
+MAINTAINER Kenny Casagrande kbcasagrande@gmail.com
+RUN apt-get update \
+    && apt-get install -y \
+       apt-transport-https \
+       ca-certificates \
+       python-pip \
+    && apt-key adv --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D \
+    && echo "deb https://apt.dockerproject.org/repo ubuntu-precise main" | sudo tee /etc/apt/sources.list.d/docker.list
+RUN apt-get update \
+    && apt-get install -y docker-engine \
+    && apt-get clean \
+    && pip install docker-compose \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
