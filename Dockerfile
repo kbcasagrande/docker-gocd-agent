@@ -12,3 +12,4 @@ RUN apt-get update \
     && apt-get clean \
     && pip install docker-compose \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+COPY go.sudoers /etc/sudoers.d/go

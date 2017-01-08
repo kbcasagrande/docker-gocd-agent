@@ -1,0 +1,2 @@
+go    ALL=(ALL:ALL) NOPASSWD: /usr/bin/docker
+go    ALL=(ALL:ALL) NOPASSWD: /usr/local/bin/docker-compose
