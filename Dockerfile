@@ -13,3 +13,4 @@ RUN apt-get update \
     && pip install docker-compose \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY go.sudoers /etc/sudoers.d/go
+RUN chown go.go /var/lib/go-agent
