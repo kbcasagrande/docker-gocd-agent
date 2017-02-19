@@ -13,5 +13,5 @@ RUN apt-get update \
     && pip install docker-compose \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY go.sudoers /etc/sudoers.d/go
-RUN echo "StrictHostKeyChecking no"     >> /etc/ssh/ssh_config
+RUN echo "StrictHostKeyChecking no"     >> /etc/ssh/ssh_config \
  && echo "UserKnownHostsFile=/dev/null" >> /etc/ssh/ssh_config 
