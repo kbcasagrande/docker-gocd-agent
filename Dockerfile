@@ -15,5 +15,6 @@ RUN apt-get update \
     && pip install --upgrade pip \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY go.sudoers /etc/sudoers.d/go
+COPY go-agent /etc/default/go-agent
 RUN echo "StrictHostKeyChecking no"     >> /etc/ssh/ssh_config \
  && echo "UserKnownHostsFile=/dev/null" >> /etc/ssh/ssh_config 

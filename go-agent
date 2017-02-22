@@ -1,0 +1,4 @@
+GO_SERVER_URL=https://gocdserver:8154/go/
+AGENT_WORK_DIR=/var/lib/go-agent/${HOSTNAME}
+DAEMON=N
+VNC=N
