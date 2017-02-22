@@ -16,5 +16,6 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 COPY go.sudoers /etc/sudoers.d/go
 COPY go-agent /etc/default/go-agent
+COPY agent.sh /usr/share/go-agent/agent.sh
 RUN echo "StrictHostKeyChecking no"     >> /etc/ssh/ssh_config \
  && echo "UserKnownHostsFile=/dev/null" >> /etc/ssh/ssh_config 
