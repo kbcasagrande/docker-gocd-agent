@@ -22,7 +22,8 @@ if [ "$PRODUCTION_MODE" == "Y" ]; then
     if [ -f /etc/default/${SERVICE_NAME} ]; then
         echo "[$(date)] using default settings from /etc/default/${SERVICE_NAME}"
         . /etc/default/${SERVICE_NAME}
-        mkdir -p ${AGENT_WORK_DIR}
+        mkdir -p ${AGENT_WORK_DIR}/config
+        ln -s /var/lib/go-agent/config/autoregister.properties ${AGENT_WORK_DIR}/config/
     fi
 fi
 
