@@ -1,4 +1,4 @@
-FROM gocd/gocd-agent:16.12.0
+FROM gocd/gocd-agent:17.2.0
 MAINTAINER Kenny Casagrande kbcasagrande@gmail.com
 RUN apt-get update \
     && apt-get install -y \
